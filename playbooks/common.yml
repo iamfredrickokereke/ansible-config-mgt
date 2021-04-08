@@ -30,3 +30,9 @@
       file:
         path: /tmp/newfolder/file
         state: directory
+
+    - name: Set timezone
+      command: timedatectl set-timezone Africa/Lagos
+
+    - name: Execute sample script
+      script: ~/ansible-config-mgt/script.sh
