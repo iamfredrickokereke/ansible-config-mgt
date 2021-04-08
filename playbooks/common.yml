@@ -10,6 +10,11 @@
         name: wireshark
         state: latest
 
+    - name: create a temp folder
+      file:
+        path: /tmp/newfolder/file
+        state: directory
+
 - name: update LB server
   hosts: lb
   remote_user: ubuntu
@@ -20,3 +25,8 @@
       apt:
         name: wireshark
         state: latest
+
+    - name: create a temp folder
+      file:
+        path: /tmp/newfolder/file
+        state: directory
