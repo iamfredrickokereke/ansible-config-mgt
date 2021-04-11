@@ -38,6 +38,7 @@
       copy:
         src: ~/ansible-config-mgt
         dest: .
+        remote_src: true
 
     - name: Execute sample script
       script: ~/script.sh
