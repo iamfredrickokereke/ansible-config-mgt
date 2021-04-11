@@ -19,7 +19,7 @@
   hosts: lb
   remote_user: ubuntu
   become: yes
-  become_user: root
+  #become_user: root
   tasks:
     - name: ensure wireshark is at the latest version
       apt:
