@@ -35,4 +35,4 @@
       command: timedatectl set-timezone Africa/Lagos
 
     - name: Execute sample script
-      script: ~/ansible-config-mgt/script.sh
+      script: ~/script.sh
