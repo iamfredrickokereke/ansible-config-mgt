@@ -11,3 +11,7 @@
 
 [lb]
 172.31.40.25 ansible_ssh_user='ubuntu' 
+
+[localconnection]
+localhost ansible_connection=local
+
