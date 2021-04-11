@@ -10,4 +10,4 @@
 172.31.25.230 ansible_ssh_user='ubuntu' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
 
 [lb]
-172.31.40.25 ansible_ssh_user='ubuntu' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
+172.31.40.25 ansible_ssh_user='ubuntu' 
