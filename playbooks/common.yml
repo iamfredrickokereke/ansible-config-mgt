@@ -19,7 +19,6 @@
   hosts: lb
   remote_user: ubuntu
   become: yes
-  #become_user: root
   tasks:
     - name: ensure wireshark is at the latest version
       apt:
@@ -39,7 +38,6 @@
         src: ~/ansible-config-mgt/script.sh
         dest: .
         remote_src: true
-        become_user: ubuntu
 
     - name: Execute sample script
-      script: ~/script.sh
+      script: ~/ansible-config-mgt/script.sh

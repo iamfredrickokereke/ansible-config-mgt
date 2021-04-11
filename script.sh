@@ -1,4 +1,5 @@
 #!/bin/sh
 
-pwd
-echo "Ansible execution was flawless."
+sudo pwd
+sudo echo "Ansible execution was flawless."
+sudo mkdir ansible-test
