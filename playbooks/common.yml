@@ -36,7 +36,7 @@
 
     - name: Copy script to remote
       copy:
-        src: ~/ansible-config-mgt
+        src: ~/ansible-config-mgt/script.sh
         dest: .
         remote_src: true
 
