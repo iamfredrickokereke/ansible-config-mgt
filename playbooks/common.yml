@@ -39,6 +39,7 @@
         src: ~/ansible-config-mgt/script.sh
         dest: .
         remote_src: true
+        become_user: ubuntu
 
     - name: Execute sample script
       script: ~/script.sh
