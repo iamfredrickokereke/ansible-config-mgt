@@ -10,8 +10,7 @@
 172.31.25.230 ansible_ssh_user='ubuntu' 
 
 [lb]
-172.31.40.25 ansible_ssh_user='ubuntu' 
+172.31.21.200 ansible_ssh_user='ubuntu' 
 
 [localconnection]
 localhost ansible_connection=local
-
