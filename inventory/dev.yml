@@ -1,13 +1,13 @@
 [nfs]
-172.31.23.52 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
+172.31.23.52 ansible_ssh_user='ec2-user' 
 
 [webservers]
-172.31.20.82 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
-172.31.27.24 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
-172.31.20.165 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
+172.31.20.82 ansible_ssh_user='ec2-user' 
+172.31.27.24 ansible_ssh_user='ec2-user' 
+172.31.20.165 ansible_ssh_user='ec2-user' 
 
 [db]
-172.31.25.230 ansible_ssh_user='ubuntu' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
+172.31.25.230 ansible_ssh_user='ubuntu' 
 
 [lb]
-172.31.40.25 ansible_ssh_user='ubuntu' ansible_ssh_private_key_file=~/Downloads/Bastion.pem
+172.31.40.25 ansible_ssh_user='ubuntu' 
