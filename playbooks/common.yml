@@ -34,5 +34,10 @@
     - name: Set timezone
       command: timedatectl set-timezone Africa/Lagos
 
+    - name: Copy script to remote
+      copy:
+        src: ~/ansible-config-mgt
+        dest: .
+
     - name: Execute sample script
       script: ~/script.sh
