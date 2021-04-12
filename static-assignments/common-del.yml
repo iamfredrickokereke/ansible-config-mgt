@@ -11,7 +11,7 @@
         state: removed
 
 - name: update LB server
-  hosts: lb, db
+  hosts: lb
   remote_user: ubuntu
   become: yes
   become_user: root
