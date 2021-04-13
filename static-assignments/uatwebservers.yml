@@ -2,3 +2,5 @@
 - hosts: uat-webservers
   roles:
     - webserver
+  become: true
+  become_user: root
