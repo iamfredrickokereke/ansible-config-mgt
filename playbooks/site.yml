@@ -1,25 +1,48 @@
-# ---
-# - hosts: all
-# - import_playbook: ../static-assignments/common.yml
-
-# - hosts: uatwebservers
-# - import_playbook: ../static-assignments/uatwebservers.yml
-
 ---
-- name: Include dynamic variables 
+- name: Include dynamic variables
   hosts: all
-  tasks:
-    - import_playbook: ../static-assignments/common.yml 
-    - include_playbook: ../dynamic-assignments/env-vars.yml
+
+- name: import the common playbook
+  import_playbook: ../static-assignments/common.yml
   tags:
     - always
 
+
+# -------------------------------------
+- name: include the env-vars playbook
+  import_playbook: ../dynamic-assignments/env-vars.yml
+  tags:
+    - always
+
+- name: Testing the env. vars
+  hosts: web_servers
+  tasks:
+    - debug: 
+        msg: "{{enable_apache_lb}}"
+
+# -------------------------------------
+
+# configure nfs server
+- name: loading play for NFS server(s)
+  import_playbook: ../static-assignments/nfs.yml
+
+# configure database server
+- name: loading play for database server(s)
+  import_playbook: ../static-assignments/db.yml
+
+# configure webservers
 - name: Webserver assignment
-  hosts: webservers
-    - import_playbook: ../static-assignments/webservers.yml
+  import_playbook: ../static-assignments/webservers.yml
 
-
+# configure loadbalancer
 - name: Loadbalancers assignment
-  hosts: lb
-   - import_playbook: ../static-assignments/loadbalancers.yml
+  import_playbook: ../static-assignments/lb.yml
   when: load_balancer_is_required
+
+# setup ssl
+- name: Letsencrypt assignment
+  import_playbook: ../static-assignments/letsencrypt.yml
+
+# configure jenkins server
+- name: jenkins assignment
+  import_playbook: ../static-assignments/jenkins.yml
